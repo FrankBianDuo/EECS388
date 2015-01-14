@@ -1,0 +1,6 @@
+1.
+Things about things go here.
+
+----
+2.
+The technique explored in Section 2.2 poses a danger to systems that rely on digital signatures because using this technique an attacker can introduce extra, malicious code without the knowledge of the program or the user since the hash of the program will still be completely valid.
