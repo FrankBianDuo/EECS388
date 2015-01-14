@@ -71,7 +71,11 @@ h.update(suffix);
 new_token = h.hexdigest()
 
 new_url = hostname + '?token=' + new_token + '&' + arguments[1] + urllib.quote(padding(len_of_m*8)) + suffix
-print new_url
+# print new_url
+
+# the new url = 
+# http://eecs388.org/project1/api?token=d127a022396f60239b3d08ecc0c4e3f4
+# &user=admin&command1=ListFiles&command2=NoOp%80%00%00%00%00%98%01%00%00%00%00%00%00&command3=DeleteAllFiles
 
 # parse url 
 parsedUrl = urlparse.urlparse(new_url)
