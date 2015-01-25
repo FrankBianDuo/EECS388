@@ -1,5 +1,14 @@
-1.
-Things about things go here.
+Part 3. Writeup
+1. The construction of HMAC token is defined as the following:
+token = HMAC_userPassword( SHA256( key + SHA256( key + message ) ) )
+
+The idea of making the HMAC guarded against the length extension attack is the 
+double hashing part of the token. By this design the key is now no longer vulnerable
+to the extension attacked described in the 1.1 of the assignment. 
+
+The reason that a length extension attack work is because H(password) is known
+to the attacker. HMAC requires different input to make it work and hence guarded 
+against length extension attack.
 
 ----
 2.
