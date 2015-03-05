@@ -14,7 +14,7 @@
 
 3d. SFTP (SSH File Transfer Protocol) OR FTPS (FTP over SSL/TLS) 
 
-4a. By using filter: tcp.port == 443 && ip.src == 10.0.2.0/24, we can get all local hosts who initiate outbound https connection. 
+4a. By using filter: tcp.port == 443 && ip.src == 10.0.2.0/24, we can get all local hosts who initiate outbound https connection. By sorting the packets by info column, we go to line where info == client hello. From the first instance, at time 177.781222 the host 10.0.2.2 initiated a https request to 141.211.13.253. Using nslookup, we get weblogin.umich.edu. Similar for tfbnw.net, fbcdn.net, akamaitechnologies.com and etc. 
 
 4b.
 
