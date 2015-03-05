@@ -10,11 +10,11 @@
 
 3b. The connection is most likely to be an active FTP. At time 83.602865, the client initiated an connection with an unprivileged source port: 50952 to destination port 21. Server syn + ack to the clients ftp command port at time 83.711403.Since throughout the ftp connection, only one unprivileged port, 50952, is opened and used, the ftp connection is active FTP.
 
-3c. The FTP login credential is in plain text. Although no successful login - 530 response -, but user information such as USER := laticia.langhans at time 115.175217 and Pass:= goblue3859 at time 121.727321 is captured in plain text. This is vulnerable to attacker.
+3c. By using filter: tcp.port == 443 && ip.src == 10.0.2.0/24, we can easily get all local hosts who initiate outbound ftp connection. The FTP login credential is in plain text. Although no successful login - 530 response -, but user information such as USER := laticia.langhans at time 115.175217 and Pass:= goblue3859 at time 121.727321 is captured in plain text. This is vulnerable to attacker.
 
 3d. SFTP (SSH File Transfer Protocol) OR FTPS (FTP over SSL/TLS) 
 
-4a. 
+4a. By using filter: tcp.port == 443 && ip.src == 10.0.2.0/24, we can get all local hosts who initiate outbound https connection. 
 
 4b.
 
