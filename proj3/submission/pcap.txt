@@ -18,7 +18,8 @@
 
 4b.  No. There is no way to hide destination IP address in the TCP connection. Even if domain name is hidden in the packet, we still can do a DNS reverse lookup.
 
-4c.  Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+4c.  At time 171.720176 we have 36 Cipher Suites.
+     Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
      Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (0xc00a)
      Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
      Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (0x0088)
