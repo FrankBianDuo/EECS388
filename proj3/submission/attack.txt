@@ -3,4 +3,39 @@
 1.  24:8B:24:56:90
 2.  Server IP address: 192.168.1.112
     Host IP address: 192.168.1.139
+3.  We used "nmap -Pn -sS -O 192.168.1.112" to get a fingerprint of the system 
+    and scanned for all open ports. The following outputs are returned.
+    ==========================================================================
+    Starting Nmap 6.47 ( http://nmap.org ) at 2015-03-09 14:33 EDT
+    Nmap scan report for 192.168.1.112
+    Host is up (0.13s latency).
+    Not shown: 996 closed ports
+    PORT    STATE SERVICE
+    21/tcp  open  ftp
+    22/tcp  open  ssh
+    80/tcp  open  http
+    443/tcp open  https
+    MAC Address: 00:C0:CA:5A:03:52 (ALFA)
+    Device type: general purpose
+    Running: Linux 3.X
+    OS CPE: cpe:/o:linux:linux_kernel:3
+    OS details: Linux 3.11 - 3.14
+    Network Distance: 1 hop
 
+    OS detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+    Nmap done: 1 IP address (1 host up) scanned in 45.15 seconds
+    ============================================================================
+    So we have tried to ssh into the server which we failed to obtain useful information.
+    We tried to compile our own ssl session key because we thought we have all the ingredients 
+    client random, server random and pre-master key. However, it turned out that we only have
+    encrypted pre-master key. Lastly, the only option left is the ftp service. It turned out 
+    that two files are availble, namely the private/public key pair.
+    Go to Edit > Preference > Protocols > SSL > Edit RSA keys list 
+    Create New > 192.168.1.112; 443; http; server-w15.key;
+    Once, it's done, all encrypted https traffic is then decrypted. 
+    Under Hypertext Transfer Protocol in the clear HTTP traffic, we see that
+    [Full request URI: http://192.168.1.112/protected/youwin.py]
+    After we go to the link we obtained the following message. 
+
+    You win! Please submit this, along with an explanation of how you got it for part 2:
+    yey6xdm2LwgDYH1DOLvGDwcacxUrzwlth24OxOLK7zLyNGuOgTPRc2UDb4wTB8kyI7HFo/1NY+Q2eOxSkXe2juLMsQ==
