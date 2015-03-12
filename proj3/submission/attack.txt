@@ -37,6 +37,23 @@
     [Full request URI: http://192.168.1.112/protected/youwin.py]
     After we go to the link we obtained the following message. 
 
+    Private key:
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICWwIBAAKBgQC13l+kXf1mKZQMcqnFy8Vc815jkV98lgTsBtU2geb/jFVklXl/
+    argu/x40E371+r4bFZW3nYx/J6BNaLLsBBRluK5zCsfBk6DlFeUMRiD2olXQlGvo
+    2h0z02/DWMwj7h+VaEICtMVdfA/+JO+IVjlPk6uwq5JhX+SmzQ1gnJy+9QIDAQAB
+    AoGAK7DASTxLI7/ZUSQ6pMnPIAVXJ5RE3CkuBYWesvmCBOIxoXhHN9Tral7fYqNM
+    XMtf4CHPVc0Dc4iRegcs9IYGYAFbaTNCaQZPv8yuBliVqf4xU+x/nREwVo/sWaKV
+    V+zjsgAN5iUSkXWup2Hx/RbIMFMJ/QnFgP3RN+ooqKrWIgECQQDtIbTkZiBUH2zs
+    UVM8OsOnqzsMG+aLkYk+q3R14hYU7OkncZZj++sYwJAtntHfxEcxq/mBXFArfoS7
+    lpISbnNzAkEAxFb6RORKu3XsQMRS8oypSloo0eGLZkM3EI6PKfSMxX8twNDXtuOd
+    9gpGJsXNNuRETDzaOceVUDNO5C+8iB559wJAf7qpOmG8RjPLMxu3LvkkTJtSKfqZ
+    W1JgT+6Aw8KtTEY0bHeln2OhxeprfvdOay7Jfnr44XI9CMCUdIrtUZpG+wJAEGrV
+    cn1EYnhx0NiZtv5cCYOQdjxN07c7G39QKUnxm3IO+Vh9MSXHR5OEWimgBz7/FwDf
+    noU5zwL7TclQEnG58QJALZBBHU3Cu7Ck1KcMRr4oeUGmfernKmFsaKzWbcV5+Q4x
+    tN6uaPUvEt/2eXoXpIBAyYn3gAwm7wn2x5UKNHCxMA==
+    -----END RSA PRIVATE KEY-----
+
 4.  You win! Please submit this, along with an explanation of how you got it for part 2:
     yey6xdm2LwgDYH1DOLvGDwcacxUrzwlth24OxOLK7zLyNGuOgTPRc2UDb4wTB8kyI7HFo/1NY+Q2eOxSkXe2juLMsQ==
 
