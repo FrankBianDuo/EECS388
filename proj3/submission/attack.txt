@@ -25,6 +25,20 @@
     OS detection performed. Please report any incorrect results at http://nmap.org/submit/ .
     Nmap done: 1 IP address (1 host up) scanned in 45.15 seconds
     ============================================================================
+    
+    ==========================================================================
+    Starting Nmap 6.47 ( http://nmap.org ) at 2015-03-09 14:48 EDT
+    Nmap scan report for 192.168.1.139
+    Host is up (0.039s latency).
+    Not shown: 997 closed ports
+    PORT      STATE SERVICE
+    22/tcp    open  ssh
+    6666/tcp  open  irc
+    6667/tcp  open  irc
+    MAC Address: 00:21:6B:9A:69:E0 (Intel Cooperation)
+    Device type: general purpose
+    ============================================================================
+    
     So we have tried to ssh into the server which we failed to obtain useful information.
     We tried to compile our own ssl session key because we thought we have all the ingredients 
     client random, server random and pre-master key. However, it turned out that we only have
