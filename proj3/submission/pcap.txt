@@ -66,4 +66,11 @@
 
 5c.  Always send request over HTTPS instead of over HTTP. According to https://www.facebook.com/notes/facebook-engineering/secure-browsing-by-default/10151590414803920, now facebook uses https by default for all Facebook users since 2013. This packet is captured in Oct 8, 2012. So, the problem should be solved by now.
 
-5d.   
+5d.  Under "Statistics" tab, we have "Show address resolution". From the information showed in the "Address Resolution" has IP address starts 69.171.0.0/16. Hence, we set filter to ip.addr == 69.171.0.0./16. There are two local hosts, namely 10.0.2.2 and 10.0.2.3 sends requests to Facebook.
+     At the following time instance, following requests were done:
+     62.611388 User went to Facebook home page 
+     67.691020 User searched "zakir durum" in the search bar
+     71.541802 User went to zakir durum's profile page.
+     75.268398 User started to Facebook messaging to "zakir durum"
+     75.633373 User uploaded an attachment to message.
+     76.660953 User checked notifications
