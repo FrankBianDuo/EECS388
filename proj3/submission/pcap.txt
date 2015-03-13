@@ -1,6 +1,11 @@
 # Project 3 Part 1
 
-1.   00:26:08:e5:66:07 10.0.2.1 (default gateway)
+1.   We realize that all most of the traffic coming in have a MAC address of 
+     00:26:08:e5:66:07. The logical guess is that the IP with the corresponding MAC
+     address is the gateway address. Hence, the local address is in the pool of 
+     IP address starting with 10.0.2.x. Possibly with a /24 subnet mask.
+
+     00:26:08:e5:66:07 10.0.2.1 (default gateway)
      04:0c:ce:d8:0f:fa 10.0.2.2
      8c:a9:82:50:f0:a6 10.0.2.3
 
@@ -60,7 +65,7 @@
 
 4e.  At time 177.781222, 10.0.2.2 sends Client Hello to 141.211.13.253. At time 177.782583 141.211.13.253 replys 10.0.2.2 with Server Hello and choose to have TLS_DHE_RSA_WITH_AES_256_CBC_SHA (0x0039)
 
-5a.  After user is logged in to facebook, other requests are send using HTTP GET request, such as at time 61.298224.
+5a.  After user is logged in to Facebook, other requests are send using HTTP GET request, such as at time 61.298224.
 
 5b.  Since packet could be captured, the request in the payload is in clear text and hence it could be modified by the attack to impersonate as the victim. 
 
