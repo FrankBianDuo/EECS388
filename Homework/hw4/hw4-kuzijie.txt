@@ -13,3 +13,7 @@
 2e.
 2f.
 2g.
+
+Reference:
+1. http://ccis2k.org/iajit/PDF/vol.3,no.4/8-abdulmotaleb.pdf
+2. http://people.cs.pitt.edu/~mehmud/docs/abliz09tourpuzzle.pdf
