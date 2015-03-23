@@ -40,19 +40,20 @@
 2b. The IRC-based "Hive Mind" mode enables a LOIC user to connect his or her
     copy of LOIC to an IRC channel in order to receive a target and other 
     attack parameters via an IRC topic message. Users can voluntarily give
-    up the control of their machine to a contrally controlled server.
-2c. 1. blacklist known compromized IP addresses.
-    2. filter out protocols that not needed. 
+    up the control of their machine to a centralizes controlled server.
+2c. 1. server stop responding to the request if it receives a large 
+       volume of the identical request in a short period of time.
+    2. filter out invalid requests.
        e.g. discard ftp request if server only hosts web service.
-    3. disable too frequent requests from a single host with the same IP.
+    3. disable too frequent requests from a single host with previously seen IP.
     4. use CAPTCHA as sort of challenge similar to client puzzles. 
        post some sort of challenge problem to filter out hosts with wrong
        solution or no solution.
-    5. server stop responding to the request if it receives a large 
-       volume of the identical request in a short period of time.
-2d. According to Wikipedia, Operation Payback was a coordinated, decentralized
-    group of attacks on high profile opponents of Internet privacy by Internet
-    activists using the "Anonymous" moniker using modified version of LOIC.
+    5. blacklist known compromized IP addresses.
+2d. Hactivists using the "Anonymous" moniker using modified version of LOIC attack
+    on high profile opponents of Internet privacy organizations, such as Visa, BoA,
+    Paypal.This kind of attacks are usually coordinated, planned and decentralized
+    DDoS attacks.
 2e. Christopher Wayne Cooper is one of the hactivist member of "Anonymous". 
     He was arrested for alleged participation in a series of DDoS attacks
     against PayPal between August 1 2010 and January 22 2011 trying to stop 
@@ -80,5 +81,4 @@ Reference:
 2. http://people.cs.pitt.edu/~mehmud/docs/abliz09tourpuzzle.pdf
 3. http://eprint.iacr.org/2010/649.pdf
 4. http://en.wikipedia.org/wiki/Operation_Payback
-5. http://security.radware.com/knowledge-center/DDoSPedia/loic-low-orbit-ion-cannon/
-6. http://leaksource.info/category/opwcit/
+5. http://leaksource.info/category/opwcit/
