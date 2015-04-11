@@ -1,0 +1,23 @@
+# Part 1: Live Analysis
+1.  From evidence_1, anti-theft machanism is initialized for normal boot.
+    Hard disk drive be destroyed by the anti-theft system.
+    Evidence_2 shows that system unable to detect any bootable hard disk
+    drive. An error message is displayed "FATAL: No bootable medium is 
+    found! System halted".
+    So in order to access the system, "ESC" was pressed to enter menu. 
+    Before doing this, network adaptor is removed (disabled in this case),
+    to prevent remote wipe of the disk image.
+    The OS is then booted using recovery mode. "root" was choosen from 
+    the recovery menu. Now, we have the root shell access.
+
+2.  Linux nefarious-laptop 2.6.28-16-generic #55-Ubuntu SMP Tue Oct 20 
+    19:48:24 UTC 2009 i686 GNU/Linux. Please refer to evidence_3.
+
+3.  The computer name is nefarious-laptop and nefarious is used for irc chatroom.
+    So, "nefarious" is the most commonly used username for the suspect. 
+
+4.  username:"swolchok" with a nickname "accomplice" based on irclogs.
+    Please refer to evidence_4. According to the chat log, swolchok was waiting
+    outside the "dough building" (DOW building) at 3:15 AM.
+
+5.  
