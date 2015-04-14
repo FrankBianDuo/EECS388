@@ -20,4 +20,19 @@
     Please refer to evidence_4. According to the chat log, swolchok was waiting
     outside the "dough building" (DOW building) at 3:15 AM.
 
-5.  
+5.  There is a encrypted file named “passwords.zip” found under “/home/nefarious/“.
+    By using fcrackzip, password "warrant" is recovered, refer to evidence_5 
+    Under the folder "vol4-3.home.nefarious.passwords", there're 5 .txt file, namely
+    password1.txt, password2.txt, password3.txt, password4.txt and password5.txt.
+    password1.txt contains string "mystery".
+    password2.txt contains string "love".
+    password3.txt contains string "secretpassword".
+    password4.txt contains string "MONKEY".
+    password5.txt contains string "jjdMn7vM3wU5tA".
+    Linux command:
+    fcrack -u -D -p american-english /root/Downloads/vol4-3.home.nefarious.passwords.zip
+    System used:  Linux kali 3.18.0-kali1-amd64 #1 SMP Debian 3.18.3-1~kali4 (2015-01-22)
+                  x86_64 GNU/Linux
+    Dictionary attack is recommended to use before brute-force method.
+    Hence, a default wordlist in Kali Linux is used.
+6.  
