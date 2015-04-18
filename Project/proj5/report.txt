@@ -35,4 +35,32 @@
                   x86_64 GNU/Linux
     Dictionary attack is recommended to use before brute-force method.
     Hence, a default wordlist in Kali Linux is used.
-6.  
+
+6.  Yes. evidence_6 is the memory block of the browsing history for firefox.
+    It is pointed to meta by inode number 218148 from /home/nefarious/.mozilla/firefox/
+    4vda6zgy.default/. There are evidences indicating that user browsed eBay: 
+    http://shop.ebay.com/?_from=R40&_trksid=p3907.m38.l1313&_nkw=nerf+gun&_sacat=
+    See-All-Categories. According to evidence_7, the suspect visited metacafe.com, Facebook,
+    popularmechanics.com, digg.com, google.com searching for knowledge regarding Nerf Gun.
+    The suspect deleted such browsing history. However, the memory is not reallocated yet.
+    Therefore, we are able to use autopsy to retrieve the file under direct block 16154 from
+    evidence_6.
+
+7.  The very obvious file that the suspect deleted is the .bash_history and evil_plan.bmp. 
+    This is supported by the .bash_history under current session from evidence:
+    vol4-3.home.nefarious..bash_history.
+    Also, from the vol4-3.var.log.auth.log, we are able to tell that @ Nov 30 12:14:17, the 
+    suspect double checked that the fragment of evil_plan.bmp is properly deleted. Therefore,
+    there’s no way to recover the evidence at software or system level. However, we are able
+    to recover the thumbnail of the evil_plan.bmp. Please refer to
+    vol4-3.home.nefarious..thumbnails.normal.22d0c19de013e5009a681dd92e965fbd.png.
+    Furthermore, several password text file were removed supported by evidence_7.
+    We are unable to recover the .bash_history that was deleted before the arrest.
+    A password.ls.part is also removed supported by evidence 
+    vol4-3.home.nefarious.Desktop.password.lst.part.
+
+8. 
+
+9.  
+
+
