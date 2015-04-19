@@ -1,5 +1,5 @@
 # Part 1: Live Analysis
-1.  From evidence_1, anti-theft machanism is initialized for normal boot.
+1.  From evidence_1, anti-theft mechanism is initialized for normal boot.
     Hard disk drive be destroyed by the anti-theft system.
     Evidence_2 shows that system unable to detect any bootable hard disk
     drive. An error message is displayed "FATAL: No bootable medium is 
@@ -39,8 +39,12 @@
 6.  Yes. evidence_6 is the memory block of the browsing history for firefox.
     It is pointed to meta by inode number 218148 from /home/nefarious/.mozilla/firefox/
     4vda6zgy.default/. There are evidences indicating that user browsed eBay: 
-    http://shop.ebay.com/?_from=R40&_trksid=p3907.m38.l1313&_nkw=nerf+gun&_sacat=
-    See-All-Categories. According to evidence_7, the suspect visited metacafe.com, Facebook,
+    1. http://shop.ebay.com/?_from=R40&_trksid=p3907.m38.l1313&_nkw=nerf+gun&_sacat=
+       See-All-Categories. 
+    2. http://www.amazon.com/s/qid=1259033248/ref=sr_pg_2?ie=UTF8&rs=&keywords=nerf%20guns
+       &rh=i%3Aaps%2Ck%3Anerf%20guns&page=2r^
+    3. http://www.ehow.com/how_4765156_choose-nerf-gun.htmlH
+    According to evidence_8, the suspect visited metacafe.com, Facebook,
     popularmechanics.com, digg.com, google.com searching for knowledge regarding Nerf Gun.
     The suspect deleted such browsing history. However, the memory is not reallocated yet.
     Therefore, we are able to use autopsy to retrieve the file under direct block 16154 from
@@ -62,5 +66,19 @@
 8. 
 
 9.  
+08:00:27:68:e3:e8
+
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    address 10.0.2.15 
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    prefix 24 (255.255.255.0) 
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    gateway 10.0.2.2 
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    nameserver '141.213.4.4' 
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    nameserver '141.213.15.4' 
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    nameserver '141.212.2.81' 
+Nov 24 20:52:45 nefarious-laptop NetworkManager: <info>    domain name 'eecs.umich.edu' 
 
 
+
+
+
+141.212.54.121
+68.40.49.30
