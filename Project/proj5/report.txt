@@ -66,6 +66,13 @@
     vol4-3.home.nefarious.Desktop.password.lst.part.
 
 8. //All timestamps are are in EST
+//Changing IP address
+Nov 24 22:39:17 - Suspect changed IP address with command "/sbin/ifconfig eth0 essid 141.212.111.41"
+Nov 24 22:39:22 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
+Nov 24 23:09:53 - Suspect changed IP address with command "/sbin/ifconfig wlan0 141.212.111.41"
+Nov 24 23:09:57 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
+Nov 24 23:37:30 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
+
 //installing iirsi
 Nov 25 00:44:09 User nefarious sudo as root ran /usr/bin/aptitude install irssi
 
@@ -83,7 +90,37 @@ Nov 25 00:44:09 User nefarious sudo as root ran /usr/bin/aptitude install irssi
 01:56 - user:nefarious leaves the irc channel #planning
 Nov 25 01:56:28 (log ends)
 
-//
+//Editing ssh_config
+Nov 25 02:35:39 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
+Nov 25 02:38:15 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
+
+//Hydra
+Nov 25 04:34:35 - Suspect acessed the source files for Hydra 5.4 in the nefarious user home directory.
+Nov 25 09:15:18 - Suspect changed his ip address with command "/sbin/ifconfig eth0 141.212.111.41"
+********************NEED THINGS THAT SHOW HE ACCESED SERVER AND EDITED THE HTML FILE (cant do to timestamp issue)
+
+//Accessing the server (all commands are run on victims server in this section)
+Nov 25 (sometime before) 10:36 - Root user changes IP address with command "ifconfig eth1 141.212.111.42"
+Nov 25 (sometime before) 10:36 - Root user viewed part of the file "auth.log" with command "tail /var/log/auth.log"
+Nov 25 (sometime before) 10:36 - Root user removed bash_history with command "rm .bash_history"
+Nov 25 (sometime before) 10:36 - Root user shutdown the server with command "shutdown -h now"
+Nov 25 (sometime before) 10:36 - Root user changed the password with command "passwd"
+Nov 25 (sometime before) 10:36 - Root user edited file "index.html" with command "vi /var/www/index.html"
+Nov 25 (sometime before) 10:36 - Root user exited the system
+Nov 25 (sometime before) 10:36 - Root user edited file "index.html" with command "vi /var/www/index.html ."
+Nov 25 (sometime before) 10:36 - Root user changed the IP address with command "ifconfig eth1 141.212.111.42"
+Nov 25 (sometime before) 10:36 - Root user shut down the server with command "shutdown -h now"
+Nov 25 (sometime before) 10:36 - Root user changed the password with command "passwd"
+Nov 25 (sometime before) 10:36 - Root user exited the session.
+
+//Clearing up the laptop
+Nov 30 12:14:17 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag evil_plan.bmp"
+Nov 30 12:14:41 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag /home/nefarious/Documents/evil_plan.bmp"
+Nov 30 12:14:49 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag evil_plan.bmp"
+Nov 30 (sometime before) 12:16:46 - Removed bash_history with command "rm /home/nefarious/.bash_history"
+Nov 30 (sometime before) 12:16:46 - unset HISTORY with command "unset HISTORY"
+Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "rm evil_plan.bmp"
+
 
 
 9.  1. We examine the entire hard disk drive. We found that there is another partition.
