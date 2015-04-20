@@ -170,7 +170,18 @@ Nov 25 01:56:28 (log ends)
      This is supported in the same evidence_8.png.
 
 
-
+14.  A two-factor authentication can be used in ssh login. A token device can be given
+     to rightful users. So for each ssh login, additional challenge is involved. This 
+     prevents the distributed attack on the login password.
+     Furthermore, although Break-in attempt was flagged in the auth.log on the remote
+     server, there’s nothing the server did to stop the further attack from the same 
+     ip address. A Cisco PIX or ASA firewall can be implemented before the server.
+     So, firewall drops the request or packet if multiple fail attempts are recorded.
+     The requests are dropped before it reaches the server. 
+     Also a RADIUS server should be implemented to use AAA protocol to manage the access
+     of the network. In this case, default username such as root is disabled. If the 
+     attacker wants to gain access to the server, he/she has to guess the username as
+     well, which makes the attack more challenging.
 
 
 MAC address: 08:00:27:68:e3:e8
