@@ -148,7 +148,31 @@
     4. The suspect downloaded the Metasploit framework 3.3 on his Desktop.
     5. hydra-5.4 is install under suspect's home directory.
     6. MAC address used by the suspect is 08:00:27:68:e3:e8.
-       Further investigation at the gateway router should be conducted to further prove his illegal actions.
+       Further investigation at the gateway router should be conducted to further prove his 
+       illegal actions.
+    7. Since, both ftp and ssh are available on the remote server provided by HQ, 
+       we decide to use ssh to login into the machine. 
+       However, the username is missing at the current stage. Username such as
+       nefarious didn’t work. We decide to go back to auth.log
+       supported in evidence: vol4-3.var.log.auth.log. During the period of attack, 
+       nefarious was in the sudo mode. This is backed the evidence in the log:
+       -----------------------------------------------------------------------------
+       Nov 24 23:09:57 nefarious-laptop sudo: nefarious : TTY=pts/0 ; 
+       PWD=/home/nefarious/hydra-5.4-src ; 
+       USER=root ; 
+       COMMAND=/sbin/ifconfig eth0 141.212.111.41
+       -----------------------------------------------------------------------------
+       Therefore, it’s reasonable to believe that the username used could be root.
+       As for the password, we managed to find 5 text files that were encrypted.
+       After several attempts, the following credentials are useful:
+       -----------------------------------------------------------------------------
+       username: root
+       password: jjdMn7vM3wU5tA
+       -----------------------------------------------------------------------------
+       It appears that the password used for ssh is in the encrypted password file, 
+       password.zip, which is obtained from the suspect's hard disk drive.
+       From this, we strongly believe that the suspect is associated with the unauthorized
+       access to remote server provided by HQ.
 
 10. We are able to browse the default page on the server. The following messages 
     are displayed:
@@ -157,28 +181,9 @@
     Dr. Academic Researcher is a loser who knows nothing about computer security.
     -----------------------------------------------------------------------------
     Therefore, our best guess would be that the site was previously owned by
-    Dr. Academic Research. Since, both ftp and ssh are available, we decide to use
-    ssh to login into the machine. 
-    However, the username is missing at the current stage. Username such as
-    nefarious didn’t work. We decide to go back to auth.log
-    supported in evidence: vol4-3.var.log.auth.log. During the period of attack, 
-    nefarious was in the sudo mode. This is backed the evidence in the log:
-    -----------------------------------------------------------------------------
-    Nov 24 23:09:57 nefarious-laptop sudo: nefarious : TTY=pts/0 ; 
-    PWD=/home/nefarious/hydra-5.4-src ; 
-    USER=root ; 
-    COMMAND=/sbin/ifconfig eth0 141.212.111.41
-    -----------------------------------------------------------------------------
-    Therefore, it’s reasonable to believe that the username used could be root.
-    As for the password, we managed to find 5 text files that were encrypted.
-    After several attempts, the following credentials are useful:
-    -----------------------------------------------------------------------------
-    username: root
-    password: jjdMn7vM3wU5tA
-    -----------------------------------------------------------------------------
-    
-    Supported by evidence_11.png, the sole owner to the machine appears to be 
-    Dr. Academic Researcher who uses "academic" as the username on the machine.
+    Dr. Academic Research. Supported by evidence_11.png, the sole owner to the machine 
+    appears to be Dr. Academic Researcher who uses "academic" as the username on 
+    the machine.
 
 11.  We did a port scan on the server using nmap on Kali Linux.
      We found that there are ports opened on the server, supported by evidence_10.png.
@@ -222,7 +227,6 @@
      body of the page. This phrase is actually commented out.
      The suspect also change the root password. Then he shut down the server several
      times. This is supported in the same evidence_9.png.
-
 
 14.  A two-factor authentication can be used in ssh login. A token device can be given
      to rightful users. So for each ssh login, additional challenge is involved. This 
