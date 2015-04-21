@@ -109,7 +109,6 @@
     							    "/usr/bin/gconftool --get /system/http_proxy/host"
     							    "/usr/bin/gconftool --get /system/http_proxy/port"
     Nov 25 09:15:18 - Suspect changed his ip address with command "/sbin/ifconfig eth0 141.212.111.41"
-    ********************NEED THINGS THAT SHOW HE ACCESED SERVER AND EDITED THE HTML FILE (cant do to timestamp issue)
 
     //Accessing the server (all commands are run on victims server in this section)
     Nov 25 (sometime before) 10:36 - Root user changes IP address with command "ifconfig eth1 141.212.111.42"
