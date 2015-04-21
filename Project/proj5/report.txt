@@ -220,7 +220,38 @@
      to 141.212.111.41 on Nov 24 23:09:57 and on Nov 25. This is supported in evidence: 
      vol4-3.var.log.auth.log. With this, we strongly believe that he’s associated with
      the unauthorized modifications of files on Dr. Academic’s server.
-     
+     This shows that the suspect logged into the server during Nov 25 10:31 - 10:36.
+     The suspect has to be the one who modified index.html.
+     Referred to remote.auth.log2, the following log shows that nefarious attempted to 
+     login to the server. 
+     -----------------------------------------------------------------------------
+     Nov 24 23:25:05 debian sshd[2134]: Invalid user nefarious from 141.212.111.41
+     -----------------------------------------------------------------------------
+     -----------------------------------------------------------------------------------------------
+     Nov 24 23:38:03 debian sshd[2092]: Failed password for root from 141.212.111.41 port 41616 ssh2
+     Nov 24 23:38:03 debian sshd[2095]: Failed password for root from 141.212.111.41 port 41618 ssh2
+     Nov 24 23:38:03 debian sshd[2093]: Failed password for root from 141.212.111.41 port 41617 ssh2
+     Nov 24 23:38:03 debian sshd[2096]: Failed password for root from 141.212.111.41 port 41619 ssh2
+     Nov 24 23:38:04 debian sshd[2097]: Failed password for root from 141.212.111.41 port 41620 ssh2
+     Nov 24 23:38:04 debian sshd[2099]: Failed password for root from 141.212.111.41 port 41621 ssh2
+     Nov 24 23:38:04 debian sshd[2102]: Failed password for root from 141.212.111.41 port 41622 ssh2
+     Nov 24 23:38:04 debian sshd[2104]: Failed password for root from 141.212.111.41 port 41623 ssh2
+     Nov 24 23:38:04 debian sshd[2105]: Failed password for root from 141.212.111.41 port 41624 ssh2
+     Nov 24 23:38:04 debian sshd[2106]: Failed password for root from 141.212.111.41 port 41625 ssh2
+     Nov 24 23:38:06 debian sshd[2102]: Failed password for root from 141.212.111.41 port 41622 ssh2
+     Nov 24 23:38:06 debian sshd[2105]: Failed password for root from 141.212.111.41 port 41624 ssh2
+     Nov 24 23:38:06 debian sshd[2106]: Failed password for root from 141.212.111.41 port 41625 ssh2
+     Nov 24 23:38:08 debian sshd[2102]: Failed password for root from 141.212.111.41 port 41622 ssh2   
+     -----------------------------------------------------------------------------------------------
+     The above file shows that there’re many failed attempts from suspect’s ip address.
+     The following display shows that suspect had access to the server after multiple attempts for 
+     nearly 8 hours of guess. He also changed the root password twice which matches the
+     record on .bash_history.
+     --------------------------------------------------------------------------------------------------
+     Nov 25 09:45:09 debian sshd[6368]: Accepted password for root from 141.212.111.41 port 48299 ssh2
+     Nov 25 10:34:58 debian passwd[6429]: pam_unix(passwd:chauthtok): password changed for root
+     Dec  7 18:35:26 debian passwd[2062]: pam_unix(passwd:chauthtok): password changed for root
+     --------------------------------------------------------------------------------------------------
 
 13.  Supported by evidence_9.png, the suspect clearly logged on into the machine 
      he first changed the ip address of the server to 141.212.111.42. He removed
