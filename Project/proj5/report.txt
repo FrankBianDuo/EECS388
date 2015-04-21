@@ -1,4 +1,5 @@
-# Part 1: Live Analysis
+# Project 5
+
 1.  From evidence_1, anti-theft mechanism is initialized for normal boot.
     Hard disk drive be destroyed by the anti-theft system.
     Evidence_2 shows that system unable to detect any bootable hard disk
@@ -46,11 +47,12 @@
     2. http://www.amazon.com/s/qid=1259033248/ref=sr_pg_2?ie=UTF8&rs=&keywords=nerf%20guns
        &rh=i%3Aaps%2Ck%3Anerf%20guns&page=2r^
     3. http://www.ehow.com/how_4765156_choose-nerf-gun.htmlH
-    According to evidence_8, the suspect visited metacafe.com, Facebook,
+    According to evidence_8.txt, the suspect visited metacafe.com, Facebook,
     popularmechanics.com, digg.com, google.com searching for knowledge regarding Nerf Gun.
     The suspect deleted such browsing history. However, the memory is not reallocated yet.
     Therefore, we are able to use autopsy to retrieve the file under direct block 16154 from
-    evidence_6.
+    evidence_6. All links used in deleted block is supported by evidence, 
+    deletedBlock16154_part_of_sqliteDB.txt
 
 7.  The very obvious file that the suspect deleted is the .bash_history and evil_plan.bmp. 
     This is supported by the .bash_history under current session from evidence:
@@ -65,83 +67,88 @@
     A password.ls.part is also removed supported by evidence 
     vol4-3.home.nefarious.Desktop.password.lst.part.
 
-8. //All timestamps are are in EST
-//Changing IP address
-Nov 24 22:39:17 - Suspect changed IP address with command "/sbin/ifconfig eth0 essid 141.212.111.41"
-Nov 24 22:39:22 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
-Nov 24 23:09:53 - Suspect changed IP address with command "/sbin/ifconfig wlan0 141.212.111.41"
-Nov 24 23:09:57 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
-Nov 24 23:37:30 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
+8.  //All timestamps are are in EST
+    //Changing IP address
+    Nov 24 22:39:17 - Suspect changed IP address with command "/sbin/ifconfig eth0 essid 141.212.111.41"
+    Nov 24 22:39:22 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
+    Nov 24 23:09:53 - Suspect changed IP address with command "/sbin/ifconfig wlan0 141.212.111.41"
+    Nov 24 23:09:57 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
+    Nov 24 23:37:30 - Suspect changed IP address with command "/sbin/ifconfig eth0 141.212.111.41"
 
-//installing iirsi
-Nov 25 00:44:09 User nefarious sudo as root ran /usr/bin/aptitude install irssi
+    //installing iirsi
+    Nov 25 00:44:09 User nefarious sudo as root ran /usr/bin/aptitude install irssi
 
-//using iirsi Nov 25 01:54:24 (log starts)
-01:54 - user:nefarious , nefarious@swolchokhost.eecs.umich.edu joined irc channel #planning
-01:54 - user:accomplice , swolchok@swolchokhost.eecs.umich.edu joined irc channel #planning
-01:54 - accomplice - oh good you're here
-01:55 - accomplice - are you sure this is secure? I'm nervous about helping you with this
-01:55 - nefarious - don't worry it will be FINE and then he will be GONE
-01:55 - nefarious - your car is in working order RIGHT?
-01:55 - nefarious - I need to make a fast GETAWAY
-01:56 - accomplice - yes I'll be waiting outside that dough building or whatever you said it's called at 3:15 AM
-01:56 - nefarious - excellent
-01:56 - I need to go PREPARE
-01:56 - user:nefarious leaves the irc channel #planning
-Nov 25 01:56:28 (log ends)
+    //using iirsi Nov 25 01:54:24 (log starts)
+    01:54 - user:nefarious , nefarious@swolchokhost.eecs.umich.edu joined irc channel #planning
+    01:54 - user:accomplice , swolchok@swolchokhost.eecs.umich.edu joined irc channel #planning
+    01:54 - accomplice - oh good you're here
+    01:55 - accomplice - are you sure this is secure? I'm nervous about helping you with this
+    01:55 - nefarious - don't worry it will be FINE and then he will be GONE
+    01:55 - nefarious - your car is in working order RIGHT?
+    01:55 - nefarious - I need to make a fast GETAWAY
+    01:56 - accomplice - yes I'll be waiting outside that dough building or whatever you said it's called at 3:15 AM
+    01:56 - nefarious - excellent
+    01:56 - I need to go PREPARE
+    01:56 - user:nefarious leaves the irc channel #planning
+    Nov 25 01:56:28 (log ends)
 
-//Editing ssh_config
-Nov 25 02:35:39 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
-Nov 25 02:38:15 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
+    //Editing ssh_config
+    Nov 25 02:35:39 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
+    Nov 25 02:38:15 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
 
-//Installing libraries (all actions in this section were by user nefarious sudo'd as root in the hydra source file directory)
-Nov 25 03:55:15 - Installed libssh-2 with command "/usr/bin/aptitude install libssh-2"
-Nov 25 03:55:49 - Installed libssh-2-dev with command "/usr/bin/aptitude install libssh-2-dev"
-Nov 25 03:56:26 - Installed libssl-dev with command "/usr/bin/aptitude install libssl-dev"
-Nov 25 04:00:49 - Installed apt-file with command "/usr/bin/apt-get install apt-file"
-Nov 25 04:01:17 - Updated apt-file with command "/usr/bin/apt-file update"
+    //Installing libraries (all actions in this section were by user nefarious sudo'd as root in the hydra source file directory)
+    Nov 25 03:55:15 - Installed libssh-2 with command "/usr/bin/aptitude install libssh-2"
+    Nov 25 03:55:49 - Installed libssh-2-dev with command "/usr/bin/aptitude install libssh-2-dev"
+    Nov 25 03:56:26 - Installed libssl-dev with command "/usr/bin/aptitude install libssl-dev"
+    Nov 25 04:00:49 - Installed apt-file with command "/usr/bin/apt-get install apt-file"
+    Nov 25 04:01:17 - Updated apt-file with command "/usr/bin/apt-file update"
 
-//Hydra
-Nov 25 04:34:35 - Suspect acessed the source files for Hydra 5.4 in the nefarious user home directory.
-Nov 25 04:34:47 - Suspect sets up a proxy with commands "/usr/bin/gconftool --get /system/http_proxy/use_http_proxy"
-														"/usr/bin/gconftool --get /system/http_proxy/host"
-														"/usr/bin/gconftool --get /system/http_proxy/port"
-Nov 25 09:15:18 - Suspect changed his ip address with command "/sbin/ifconfig eth0 141.212.111.41"
-********************NEED THINGS THAT SHOW HE ACCESED SERVER AND EDITED THE HTML FILE (cant do to timestamp issue)
+    //Hydra
+    Nov 25 04:34:35 - Suspect acessed the source files for Hydra 5.4 in the nefarious user home directory.
+    Nov 25 04:34:47 - Suspect sets up a proxy with commands "/usr/bin/gconftool --get /system/http_proxy/use_http_proxy"
+    							    "/usr/bin/gconftool --get /system/http_proxy/host"
+    							    "/usr/bin/gconftool --get /system/http_proxy/port"
+    Nov 25 09:15:18 - Suspect changed his ip address with command "/sbin/ifconfig eth0 141.212.111.41"
+    ********************NEED THINGS THAT SHOW HE ACCESED SERVER AND EDITED THE HTML FILE (cant do to timestamp issue)
 
-//Accessing the server (all commands are run on victims server in this section)
-Nov 25 (sometime before) 10:36 - Root user changes IP address with command "ifconfig eth1 141.212.111.42"
-Nov 25 (sometime before) 10:36 - Root user viewed part of the file "auth.log" with command "tail /var/log/auth.log"
-Nov 25 (sometime before) 10:36 - Root user removed bash_history with command "rm .bash_history"
-Nov 25 (sometime before) 10:36 - Root user shutdown the server with command "shutdown -h now"
-Nov 25 (sometime before) 10:36 - Root user changed the password with command "passwd"
-Nov 25 (sometime before) 10:36 - Root user edited file "index.html" with command "vi /var/www/index.html"
-Nov 25 (sometime before) 10:36 - Root user exited the system
-Nov 25 (sometime before) 10:36 - Root user edited file "index.html" with command "vi /var/www/index.html ."
-Nov 25 (sometime before) 10:36 - Root user changed the IP address with command "ifconfig eth1 141.212.111.42"
-Nov 25 (sometime before) 10:36 - Root user shut down the server with command "shutdown -h now"
-Nov 25 (sometime before) 10:36 - Root user changed the password with command "passwd"
-Nov 25 (sometime before) 10:36 - Root user exited the session.
+    //Accessing the server (all commands are run on victims server in this section)
+    Nov 25 (sometime before) 10:36 - Root user changes IP address with command "ifconfig eth1 141.212.111.42"
+    Nov 25 (sometime before) 10:36 - Root user viewed part of the file "auth.log" with command "tail /var/log/auth.log"
+    Nov 25 (sometime before) 10:36 - Root user removed bash_history with command "rm .bash_history"
+    Nov 25 (sometime before) 10:36 - Root user shutdown the server with command "shutdown -h now"
+    Nov 25 (sometime before) 10:36 - Root user changed the password with command "passwd"
+    Nov 25 (sometime before) 10:36 - Root user edited file "index.html" with command "vi /var/www/index.html"
+    Nov 25 (sometime before) 10:36 - Root user exited the system
+    Nov 25 (sometime before) 10:36 - Root user edited file "index.html" with command "vi /var/www/index.html ."
+    Nov 25 (sometime before) 10:36 - Root user changed the IP address with command "ifconfig eth1 141.212.111.42"
+    Nov 25 (sometime before) 10:36 - Root user shut down the server with command "shutdown -h now"
+    Nov 25 (sometime before) 10:36 - Root user changed the password with command "passwd"
+    Nov 25 (sometime before) 10:36 - Root user exited the session.
 
-//Clearing up the laptop
-Nov 30 12:14:17 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag evil_plan.bmp"
-Nov 30 12:14:41 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag /home/nefarious/Documents/evil_plan.bmp"
-Nov 30 12:14:49 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag evil_plan.bmp"
-Nov 30 (sometime before) 12:16:46 - Removed bash_history with command "rm /home/nefarious/.bash_history"
-Nov 30 (sometime before) 12:16:46 - unset HISTORY with command "unset HISTORY"
-Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "rm evil_plan.bmp"
-
-
+    //Clearing up the laptop
+    Nov 30 12:14:17 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag evil_plan.bmp"
+    Nov 30 12:14:41 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag /home/nefarious/Documents/evil_plan.bmp"
+    Nov 30 12:14:49 - Inspected the fragmentation of the file "evil_plan.bmp" with command "/usr/sbin/filefrag evil_plan.bmp"
+    Nov 30 (sometime before) 12:16:46 - Removed bash_history with command "rm /home/nefarious/.bash_history"
+    Nov 30 (sometime before) 12:16:46 - unset HISTORY with command "unset HISTORY"
+    Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "rm evil_plan.bmp"
 
 9.  1. We examine the entire hard disk drive. We found that there is another partition.
+       /puppy431/pup-431.sfs is a backup of the drive. Unfortunately, we are not be able to mount the drive
+       as the format of the partition is unknown.
     2. Under the /root/ folder there is two script namely, get_external_ip.sh and
-    tweet_alarm.sh. After examine the script, the suspect twitted two messages on 
-    twitter with two distinct ip addresses: 141.212.54.121 and 68.40.49.30.
+       tweet_alarm.sh. After examine the script, the suspect twitted two messages on 
+       twitter with two distinct ip addresses: 141.212.54.121 and 68.40.49.30.
+       This can be found on twitter: https://twitter.com/innocuous_news.
+       Two tweets are sent on twitter during the event.
     3. under /home/nefarious/.ssh/known_hosts, we found that the suspect
-    sshed two server @ fafner.eecs.umich.edu, 141.212.109.58 and 141.212.111.42.
-    We emailed HQ and requested for further investigations to those two ip addresses.
-    Notified by HQ, the server changed ip address to 54.166.91.77. 
+       sshed two server @fafner.eecs.umich.edu, 141.212.109.58 and 141.212.111.42.
+       We emailed HQ and requested for further investigations to those two ip addresses.
+       Notified by HQ, the server changed ip address to 54.166.91.77. 
     4. The suspect downloaded the Metasploit framework 3.3 on his Desktop.
+    5. hydra-5.4 is install under suspect's home directory.
+    6. MAC address used by the suspect is 08:00:27:68:e3:e8.
+       Further investigation at the gateway router should be conducted to further prove his illegal actions.
 
 10. We are able to browse the default page on the server. The following messages 
     are displayed:
@@ -174,7 +181,7 @@ Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "r
     Dr. Academic Researcher who uses "academic" as the username on the machine.
 
 11.  We did a port scan on the server using nmap on Kali Linux.
-     We found that there are ports opened on the server, supported by evidence_10.\
+     We found that there are ports opened on the server, supported by evidence_10.png.
      The services that are opened on server are:
      -----------------------------------------------------------------------------
      PORT        STATE   SERVICE
@@ -192,9 +199,10 @@ Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "r
      running on the machine providing web service.
 
 12.  From the auth.log on suspect's machine and the auth.log on Dr. Academic's 
-     machine, there are dozens of failed remote login attempts. This 
-     clearly that the access to the machine was not granted to the suspect. 
-     In this case, it's likely that the suspect did a dictionary attack on Dr.
+     machine, there are dozens of failed remote login attempts. 
+     We strongly believe that hydra-5.4 is used to perform this distributed 
+     attack. This clearly that the access to the machine was not granted to the 
+     suspect. In this case, it's likely that the suspect did a dictionary attack on Dr.
      Academic's machine. The machine is compromized as according to the wtmp file
      on the debian machine. Referring to evidence_12.png, we can see the suspect
      ip address of 141.212.111.41 was logged on into machine on
@@ -206,15 +214,14 @@ Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "r
      subnet. This is possibly to bypass a security mechanism where the server disallows
      root access to connections outside of the subnet.
 
-
-13.  Supported by evidence_8.png, the suspect clearly logged on into the machine 
+13.  Supported by evidence_9.png, the suspect clearly logged on into the machine 
      he first changed the ip address of the server to 141.212.111.42. He removed
      .bash_history without authorization. furthermore, he changed the default 
      web page hosted on the machine to insult Dr. Academic Researher.
      Also we discovered an ambiguous comment:"The duck flies at midnight!" in the
      body of the page. This phrase is actually commented out.
-     The suspect also change the root password. Then he shut down the server.
-     This is supported in the same evidence_8.png.
+     The suspect also change the root password. Then he shut down the server several
+     times. This is supported in the same evidence_9.png.
 
 
 14.  A two-factor authentication can be used in ssh login. A token device can be given
@@ -231,6 +238,6 @@ Nov 30 (sometime before) 12:16:46 - Removed file "evil_plan.bmp" with command "r
      well, which makes the attack more challenging.
 
 
-MAC address: 08:00:27:68:e3:e8
+
 
 
