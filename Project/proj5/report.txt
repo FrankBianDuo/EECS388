@@ -94,6 +94,13 @@ Nov 25 01:56:28 (log ends)
 Nov 25 02:35:39 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
 Nov 25 02:38:15 nefarious-laptop sudo: nefarious : TTY=pts/0 ; PWD=/home/nefarious ; USER=root ; COMMAND=sudoedit /etc/ssh/ssh_config
 
+//Installing libraries (all actions in this section were by user nefarious sudo'd as root in the hydra source file directory)
+Nov 25 03:55:15 - Installed libssh-2 with command "/usr/bin/aptitude install libssh-2"
+Nov 25 03:55:49 - Installed libssh-2-dev with command "/usr/bin/aptitude install libssh-2-dev"
+Nov 25 03:56:26 - Installed libssl-dev with command "/usr/bin/aptitude install libssl-dev"
+Nov 25 04:00:49 - Installed apt-file with command "/usr/bin/apt-get install apt-file"
+Nov 25 04:01:17 - Updated apt-file with command "/usr/bin/apt-file update"
+
 //Hydra
 Nov 25 04:34:35 - Suspect acessed the source files for Hydra 5.4 in the nefarious user home directory.
 Nov 25 09:15:18 - Suspect changed his ip address with command "/sbin/ifconfig eth0 141.212.111.41"
